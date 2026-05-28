@@ -1,0 +1,16 @@
+{
+  "name": "sontung-youtube-view-count",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm -w web run dev",
+    "build": "npm -w web run build",
+    "preview": "npm -w web run preview",
+    "lint": "npm -w web run lint",
+    "format": "npm -w web run format",
+    "typecheck": "npm -w web run typecheck"
+  }
+}
+
