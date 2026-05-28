@@ -1,6 +1,9 @@
 {
   "name": "sontung-youtube-view-count",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "workspaces": [
     "web"
   ],
