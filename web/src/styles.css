@@ -58,8 +58,20 @@ code {
   margin: 0 auto;
 }
 
+@media (max-width: 520px) {
+  .container {
+    width: min(1100px, calc(100% - 28px));
+  }
+}
+
 .header {
   padding: 56px 0 18px;
+}
+
+@media (max-width: 520px) {
+  .header {
+    padding: 36px 0 14px;
+  }
 }
 
 .hero {
@@ -107,6 +119,12 @@ code {
   max-width: 70ch;
 }
 
+@media (max-width: 520px) {
+  .heroSubtitle {
+    font-size: 14px;
+  }
+}
+
 .main {
   padding: 18px 0 48px;
   flex: 1;
@@ -116,6 +134,13 @@ code {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 20px;
+  align-items: start;
+}
+
+.leftCol {
+  display: grid;
+  gap: 20px;
+  align-content: start;
 }
 
 @media (max-width: 980px) {
@@ -131,6 +156,44 @@ code {
   box-shadow: var(--shadow);
   padding: 18px;
   backdrop-filter: blur(10px);
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+}
+
+.artist {
+  display: grid;
+  gap: 10px;
+}
+
+.artistName {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.artistBio {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.artistLink {
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 14px;
+}
+
+.artistLink:hover {
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .yt {
@@ -170,10 +233,22 @@ code {
   color: var(--muted);
 }
 
+@media (max-width: 520px) {
+  .sectionTitle {
+    font-size: 12px;
+  }
+}
+
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+}
+
+@media (max-width: 420px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
 }
 
 .stat {
@@ -185,6 +260,12 @@ code {
   display: grid;
   align-content: start;
   gap: 8px;
+}
+
+@media (max-width: 520px) {
+  .statValue {
+    font-size: 28px;
+  }
 }
 
 .statTop {
@@ -203,6 +284,188 @@ code {
   font-size: 32px;
   font-weight: 750;
   letter-spacing: -0.02em;
+}
+
+.odoWrap {
+  display: inline-flex;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+
+.odoPlaceholder {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* odometerjs base tweaks to match the UI */
+.odometer {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1;
+}
+
+.odometer .odometer-digit {
+  padding: 0 0.02em;
+}
+
+.odometer .odometer-formatting-mark {
+  padding: 0 0.22em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.stack {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.refreshTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted2);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.refreshLabel {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.refreshValue {
+  color: var(--muted);
+}
+
+.bar {
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(88, 210, 255, 0.8), rgba(255, 77, 181, 0.75));
+  border-radius: 999px;
+}
+
+.milestonesTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.milestonesTitle {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+
+.milestonesHint {
+  font-size: 12px;
+  color: var(--muted2);
+}
+
+.milestonesGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.milestone {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.milestone.reached {
+  border-color: rgba(120, 255, 168, 0.26);
+  background: rgba(120, 255, 168, 0.06);
+}
+
+.milestoneValue {
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.milestoneSub {
+  font-size: 12px;
+  color: var(--muted2);
+  line-height: 1.35;
+}
+
+.milestoneRight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dot.on {
+  background: rgba(120, 255, 168, 0.75);
+  border-color: rgba(120, 255, 168, 0.55);
+}
+
+.milestonesAdd {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+@media (max-width: 520px) {
+  .milestonesAdd {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 10px 12px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.btn,
+.miniBtn {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.miniBtn {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.btn:hover,
+.miniBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .statHint {
@@ -247,6 +510,7 @@ code {
   gap: 12px;
   color: var(--muted2);
   font-size: 13px;
+  flex-wrap: wrap;
 }
 
 .metaLabel {
@@ -298,6 +562,29 @@ code {
   justify-content: space-between;
   gap: 16px;
   align-items: center;
+}
+
+@media (max-width: 520px) {
+  .footerInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footerLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footerSep {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footerVersion {
+  color: rgba(255, 255, 255, 0.72);
+  font-variant-numeric: tabular-nums;
 }
 
 .link {
