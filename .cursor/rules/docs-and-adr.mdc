@@ -1,0 +1,15 @@
+---
+description: Documentation and ADR conventions for docs/ and decisions
+globs: "docs/**/*.md"
+alwaysApply: false
+---
+
+# Docs & ADR Conventions
+
+## Docs principles
+- Keep docs task-oriented (how to run, configure, deploy, troubleshoot).
+- Prefer short sections; avoid marketing filler in engineering docs.
+
+## ADR
+- Add an ADR when a decision is durable and has trade-offs (backend/no-backend, caching strategy, hosting).
+- ADRs go in `docs/adr/` and must include: Context, Decision, Consequences, Alternatives.

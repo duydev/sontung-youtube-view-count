@@ -1,0 +1,25 @@
+---
+description: React + Vite + TypeScript conventions for components and hooks
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# React + Vite + TypeScript Conventions
+
+## React patterns
+- Use function components and hooks.
+- Keep components focused; extract reusable logic to hooks.
+- Prefer controlled, explicit state; avoid prop drilling by lifting state minimally.
+
+## TypeScript
+- Avoid `any` unless there is no reasonable alternative; prefer unknown + narrowing.
+- Model API responses with explicit types.
+- Treat numbers from APIs as strings when documented that way; convert at the edges.
+
+## Data fetching
+- Centralize fetch logic (a small `api` module) rather than scattering `fetch` calls.
+- Handle loading/error states explicitly and show sensible UI fallbacks.
+
+## Vite environment variables
+- Only `VITE_*` variables are available in the browser.
+- Anything secret must stay server-side (no `VITE_` prefix).

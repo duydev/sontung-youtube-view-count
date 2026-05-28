@@ -1,0 +1,22 @@
+---
+description: YouTube embed + view/like counter integration guidelines (API, caching, fallback)
+globs: "**/*.{ts,tsx,md}"
+alwaysApply: false
+---
+
+# YouTube Stats Integration
+
+## Source of truth
+- Use YouTube Data API v3 `videos.list(part=statistics)` to fetch `viewCount` and `likeCount`.
+- Do not scrape YouTube watch page HTML for stats.
+
+## Video ID handling
+- Prefer deriving `videoId` from `VITE_YT_VIDEO_URL` in one place and reuse it.
+- Validate that `videoId` is present; show a clear config error if missing.
+
+## Refresh strategy
+- Poll at a reasonable interval (default 30–60 seconds).
+- If there is a backend proxy, cache the YouTube response for 30–60 seconds to reduce quota usage.
+
+## Resilience
+- On API failures: keep last known stats (stale), show “đang cập nhật” indicator, avoid UI flicker.

@@ -1,0 +1,23 @@
+---
+description: Core standards for this repository (security, structure, docs discipline)
+alwaysApply: true
+---
+
+# Core Standards
+
+## Security & secrets
+- Never commit secrets: `.env`, API keys, tokens.
+- Prefer `.env.example` for documenting configuration.
+- If YouTube Data API is used, do **not** expose server secrets to the browser unless explicitly accepted.
+
+## Project intent
+- This is a public landing page for a YouTube MV embed + view/like counters.
+- Prefer simplicity: MVP should avoid unnecessary infra.
+
+## Documentation discipline
+- When changing architecture, configs, or data flows, update `docs/` (and add an ADR if the decision is durable).
+- Keep docs concise and actionable.
+
+## Git hygiene
+- Default branch is `main`.
+- Do not push direct commits to `main`; use PRs (feature → develop or feature → main if you skip develop).
