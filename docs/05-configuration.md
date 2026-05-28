@@ -22,5 +22,8 @@ VITE_YT_REFRESH_MS=30000
 ### `.env.example`
 Dự án có sẵn file mẫu tại `web/.env.example`. Bạn nên copy sang `web/.env` và chỉnh giá trị.
 
+### LocalStorage
+- Milestones được lưu trong LocalStorage theo key `yt:viewMilestones:v2`.
+
 ### Quy tắc của Vite
 - Chỉ biến bắt đầu bằng `VITE_` mới được expose cho frontend.

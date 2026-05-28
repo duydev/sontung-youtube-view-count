@@ -52,3 +52,4 @@
 ### Notes
 - Repo root không rỗng (đã có `docs/`), nên Vite app sẽ đặt trong `web/` để tránh xung đột.
 - Milestones được lưu theo key `yt:viewMilestones:v2` trong LocalStorage (có migration từ `v1`).
+- Counter animation hiện dùng thư viện `odometer`/`react-odometerjs` để ổn định cross-browser.

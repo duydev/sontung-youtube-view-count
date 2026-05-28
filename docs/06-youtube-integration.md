@@ -18,6 +18,10 @@ Từ URL dạng `https://www.youtube.com/watch?v=jpYRA5xvNiY` thì `VIDEO_ID = j
   - hiển thị số gần nhất (stale),
   - thông báo “đang cập nhật”/“tạm thời không lấy được dữ liệu”.
 
+### Ghi chú triển khai hiện tại
+- UI hiện hỗ trợ **client-only** bằng `VITE_YT_API_KEY` (không khuyến nghị cho production public).
+- Khuyến nghị tiếp theo: thêm backend/proxy để giữ `YOUTUBE_API_KEY` server-side.
+
 ### Chiến lược refresh gợi ý
 - Poll mỗi 30–60 giây.
 - Backend cache 30–60 giây để giảm API calls nếu có nhiều người truy cập cùng lúc.

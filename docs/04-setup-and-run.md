@@ -10,21 +10,18 @@ Frontend được đặt trong thư mục `web/`.
 ### Cài dependencies
 
 ```bash
-cd web
 npm install
 ```
 
 ### Chạy local
 
 ```bash
-cd web
 npm run dev
 ```
 
 ### Build
 
 ```bash
-cd web
 npm run build
 npm run preview
 ```

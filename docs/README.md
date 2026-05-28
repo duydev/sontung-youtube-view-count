@@ -24,3 +24,7 @@ Mục tiêu: tạo landing page chào mừng ca sĩ ra mắt MV mới trên YouT
 - Nếu chỉ embed video, **không** lấy được view/like đáng tin cậy từ client thuần (không có API chính thức công khai từ trang watch).
 - Cách bền vững là dùng **YouTube Data API v3** để đọc `statistics` (views/likes).
 - API key đặt trong frontend sẽ **bị lộ**, nên nên dùng backend/proxy nếu muốn bảo mật key và kiểm soát quota.
+
+## Live demo
+
+- https://sontung-youtube-view-count.vercel.app/
